@@ -1,3 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #dfecff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #4b3150;
+  line-height: 1.6;
+  background: #fff7e9 url("assets/halloween-pattern.png") repeat;
+  background-size: 400px;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Nagłówek i nawigacja */
+
+.site-header, .site-footer {
+  background: white;
+  padding: 20px;
+  border: 2px solid orange;
+  border-radius: 20px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e86b20;
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation a {
+  color: #713da0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Baner */
+
+.hero {
+  background: #ffe1b5;
+  padding: 40px;
+  margin: 20px 0;
+  border: 2px solid orange;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 38px;
+  color: #b34f8c;
+}
+
+h2 {
+  color: #854ca6;
+}
+
+h3 {
+  color: #d36a31;
+}
+
+/* Artykuł i panel boczny */
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+.content-section, .sidebar-box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 2px solid #dfbee9;
+  border-radius: 15px;
+}
+
+.sidebar-box {
+  background: #f5e8ff;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Stopka */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Widok telefonu */
+
+@media (max-width: 700px) {
+  .page-wrapper {
+    padding: 10px;
+  }
+
+  .site-header {
+    flex-direction: column;
+  }
+
+  .navigation ul {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .content-section, .sidebar-box {
+    padding: 20px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
