@@ -1,0 +1,178 @@
+/*GPT 6 Luna uzyta do poprawy wygladu*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 20px;
+  display: grid;
+  place-items: center;
+  background: #f7f8f5;
+  color: #252923;
+  font: 16px Arial, sans-serif;
+}
+
+.todo {
+  width: min(100%, 600px);
+}
+
+h1 {
+  margin-bottom: 28px;
+}
+
+.search-input,
+#new-task-text {
+  padding: 9px 0;
+  border: 0;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.search-input {
+  width: 100%;
+}
+
+.search-input:focus,
+#new-task-text:focus {
+  border-bottom-color: #536b4e;
+}
+
+ul {
+  margin: 16px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+#task-list {
+  height: 240px;
+  overflow-y: auto;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-info {
+  display: grid;
+  grid-template-columns: 190px 200px;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.task-text {
+  min-width: 0;
+}
+
+time {
+  color: #777;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.delete-task {
+  border: 0;
+  background: transparent;
+  color: #777;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#new-task-text {
+  flex: 1;
+  min-width: 180px;
+}
+
+#new-task-date {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.add-button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #536b4e;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #40563c;
+}
+
+.task-done {
+  width: 16px;
+  height: 16px;
+  accent-color: #536b4e;
+  cursor: pointer;
+}
+
+.task-done:checked + .task-info .task-text {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.edit-text,
+.edit-date {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.edit-text:focus,
+.edit-date:focus {
+  border-bottom-color: #536b4e;
+}
+
+.edit-date {
+  font-size: 14px;
+}
+
+mark {
+  border-radius: 2px;
+  background: #dce8d6;
+  color: inherit;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 32px 16px;
+  }
+
+  .task-info {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+}

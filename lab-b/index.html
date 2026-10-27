@@ -1,0 +1,45 @@
+<!--GPT 6 Luna uzyte do sprawdzenia poprawności np. zaproponował dodanie aria-label-->
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gracjan Grzeszczak (55656) - AI LAB B</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+<main class="todo">
+    <h1>Moje zadania</h1>
+
+    <input
+            id="search-input"
+            class="search-input"
+            type="search"
+            placeholder="Szukaj zadań…"
+            aria-label="Szukaj zadań"
+    >
+
+    <ul id="task-list"></ul>
+
+    <form id="add-task-form">
+        <input
+                id="new-task-text"
+                type="text"
+                placeholder="Dodaj zadanie…"
+                minlength="3"
+                maxlength="255"
+                aria-label="Nowe zadanie"
+                required
+        >
+        <input
+                id="new-task-date"
+                type="datetime-local"
+                aria-label="Termin wykonania"
+        >
+        <button class="add-button" type="submit">Dodaj</button>
+    </form>
+</main>
+</body>
+</html>
